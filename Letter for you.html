@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>thư gửi anh</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+      font-family: 'Courier New', cursive;
+      overflow-y: auto; /* Cho phép cuộn xuống */
+    }
+
+    h1 {
+      color: white;
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #letter {
+      display: none;
+      max-width: 800px;
+      margin: 0 auto 100px auto; /* căn giữa và chừa khoảng dưới */
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #444;
+      text-align: left;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #ff6f91;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff3e6c;
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      color: rgba(255,0,80,0.8);
+      font-size: 20px;
+      animation: fall linear forwards;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <h1> An meinen wichtigsten Menschen. </h1>
+  <button onclick="showLetter()">Mở thư</button>
+
+  <div id="letter">
+    <p> My heart feels lighter now, after a long time apart I no longer miss you so painfully like in the first days anymore.</p>
+	
+<p>I must admit it has not been very pleasant, but I am truly glad that you replied to me, not by avoiding like I once did.</p>
+
+<p>Thank you for replying to me, you really saved my feelings that day. It may sound a bit exaggerated, but I truly felt somewhat better after breaking down from long-term psychological abuse by the people closest to me.</p>
+
+<p>I want to say that I don’t hate you, I value you very much. It has been a long time since I had feelings for anyone like this. Once I love someone, replying to messages from others besides you always feels like laziness.</p>
+<p>I want you to know, please don’t ever think that I never respected you. I respect you too much, I consider you so important that I know how deeply you could wound my fragile heart. I have never seen you as a stranger, you once meant everything to me.</p>
+
+<p>I want to comfort you a little, even though I don’t know if you need it right now or not.
+<p>It’s so hard to describe. My thoughts just keep running endlessly, so I’ll just let you hold onto whatever words you can, I hope you understand.</p>
+
+<p>I hope you also know, you deserve to be loved so much. I hope you open your heart more for who that you love, or even to the person who will love you in the future.</p>
+<p>I hope you always smile brightly like that, smile freely whenever you want.
+
+<p>And also, when you are sad, I hope you won’t hold your wounds and loneliness all by yourself. I hope you will speak out so that those who love you can listen, hold you, and understand you better. Please don’t always put so much pressure on yourself to keep pushing forward, because once you start to be okay again, everything around you will gradually turn gentle with you.</p>
+
+<p>My protective shell is too thick, it keeps me from giving my whole heart to you, but deep down I know that I once loved, and I loved the right person. Thank you — after this, I only dare to learn to love slowly, not letting anything come too fast and leave too easily.</p>
+
+<p>Thank you for not resenting me. If I had the chance to go back to the time when we began, I would still not hesitate to walk with you through that time. I know that we are more suited to be friends, happily, safely, for both of us — even though I still want to be close to you a little more.</p>
+
+<p>You may call me pathetic-  but I once dreamed of you, and when I woke up, I felt so empty. I once prayed for you, I cried because of you, and reminisced about you.</p>
+<p>I only want you to know that you deserve to be loved, and there will be people who love you even more — more positive, more healing, and who will make your heart less weary. That person will be the one by your side one day. No matter what we become later, whether still friends or strangers, I will still pray for both of us to be happy in the future.</p>
+
+<p>I'm sorry for overthinking too much sometimes. I am sorry for some of my ways of treating you that made you feel unsafe. My heart once beat so strongly whenever I was near you, and I cherish everything you once gave me.</p>
+<p>I will try to become better, because you were once a blessing that I received in my life. So let’s just let everything go its natural way.</p>
+
+<p>Thank you for appearing in my boring life.</p>
+    <p> Goodbye,
+	Phuong Anh </p>
+  </div>
+
+  <script>
+    function showLetter() {
+      document.getElementById("letter").style.display = "block";
+    }
+
+    // tạo trái tim rơi
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (2 + Math.random() * 3) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
