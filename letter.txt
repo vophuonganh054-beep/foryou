@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>thư gửi anh</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+      font-family: 'Courier New', cursive;
+      overflow-y: auto; /* Cho phép cuộn xuống */
+    }
+
+    h1 {
+      color: white;
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #letter {
+      display: none;
+      max-width: 800px;
+      margin: 0 auto 100px auto; /* căn giữa và chừa khoảng dưới */
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #444;
+      text-align: left;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #ff6f91;
+      color: white;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff3e6c;
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      color: rgba(255,0,80,0.8);
+      font-size: 20px;
+      animation: fall linear forwards;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <h1> An meinen wichtigsten Menschen. </h1>
+  <button onclick="showLetter()">Mở thư</button>
+
+  <div id="letter">
+    <p> My heart feels lighter now, after a long time apart I no longer miss you so painfully like in the first days anymore.</p>
+	
+<p>I gotta admit, it wasn’t easy at all… but fr, I’m so glad u replied. Not like dodging me the way I once did.</p>
+<p>Thx for answering me that day, honestly u saved my feelings. Sounds a bit dramatic ikr, but after all that mental mess I went thru from ppl close to me, ur reply really made me breathe again.</p>
+
+<p>I don’t hate u, never. I value u sm. Been a long time since I felt this way abt anyone. When I’m into someone, even replying to others feels like… meh, too lazy.</p>
+<p>So pls don’t think I never respected u. I respect u TOO much. I saw u as so important, like u could break my fragile heart anytime. U weren’t just anyone, u once meant the world to me.</p>
+
+<p>I just wanna comfort u a bit, idk if u even need it right now.</p>
+<p>It’s hard to explain, my thoughts just keep running nonstop. So just take whatever words u can hold onto, hope u get me.</p>
+
+<p>I hope u know u deserve SO much love. I wish u’d open ur heart more – to me, or maybe to the one who’ll love u in the future.</p>
+<p>Pls keep smiling like u do, free & bright. Ur smile is so cute fr, whenever u laugh, my heart goes soft.</p>
+
+<p>And when ur sad too, pls don’t keep all that pain inside alone. Speak it out so ppl who care can listen, hug u, understand u more. Don’t put too much pressure on urself all the time. Once u start feeling okay again, life will turn gentle with u.</p>
+
+<p>I know my shell is thick, it stops me from giving u everything. But deep down I know I once loved, and I loved the right person. Thank u. After this, I’ll only dare to love slowly, not let things come too fast & disappear too easy.</p>
+
+<p>Thanks for not hating me. If I could go back to when we started, I’d still choose u, no hesitation. I know we’re better off as friends – safe & happy for both. Still, I wish I could be a bit closer to u.</p>
+
+<p>u can me pathetic if u want, but I once dreamed of u, and woke up empty. I was prayed for u, cried for u and uhhhh - I think it was enough.</p>
+<p>Just wanna let u know: u deserve love. There’ll be someone even better – more positive, healing, making ur heart less tired. That person will be by ur side someday. No matter what we become later, friends or strangers, I’ll still pray for both of us to be happy.</p>
+
+<p>Sorry for overthinking too much. Sorry if I ever made u feel unsafe. My heart beat so hard whenever I was near u. I still cherish everything u gave me.</p>
+<p>I’ll try to be better, bc u were once a blessing in my life. So let’s just let things flow naturally.</p>
+
+<p>Thank you for appearing in my boring life.</p>
+    <p> Goodbye,
+	Phuong Anh </p>
+  </div>
+
+  <script>
+    function showLetter() {
+      document.getElementById("letter").style.display = "block";
+    }
+
+    // tạo trái tim rơi
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (2 + Math.random() * 3) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
